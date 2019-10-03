@@ -7,9 +7,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+      span.note {
+        font-size: 120%;
+        color: red;
+      }
+    </style>
+    
   </head>
 
   <body>
+    <header>
+      <nav class = "be-red white">
+        <h1> Unab </h1>
+        <a href="/">Inicio</a>
+        <a href="/cursos/index.html">Cursos</a>
+        <a href="/students/index.html">Alumno o alumnos?</a>
+        <a href="/teachers/index.html">Profesores</a>
+
+      </nav>
+    </header>
+
     <%= yield %>
   </body>
 </html>
