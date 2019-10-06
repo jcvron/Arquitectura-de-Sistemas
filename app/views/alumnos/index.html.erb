@@ -1,0 +1,12 @@
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-6">
+    <% if user_signed_in? %>
+        <% @alumnos.each do |alumno| %>
+            <h1><%=  alumno.nombre %></h1>
+            <div>
+                <%= alumno.rut %> - <%= link_to "Ver Perfil",alumno , class:"red" %>
+            </div>
+        <%end%>
+    <%else%>
+        <h1> Por Favor Registrece <h1>
+    <%end%>

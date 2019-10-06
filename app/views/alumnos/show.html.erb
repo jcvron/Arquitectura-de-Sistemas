@@ -1,0 +1,11 @@
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-6">
+<% if user_signed_in? %>
+    <h1><%= @alumno.nombre %></h1>
+        <div class="field">
+            <%= @alumno.rut %>
+        </div>
+        <div class="field">
+            <%= @alumno.user.email %>
+        </div>
+<%end%>
