@@ -3,9 +3,9 @@
 <% if user_signed_in? %>
     <h1><%= @alumno.nombre %></h1>
         <div class="field">
-            <%= @alumno.rut %>
+            Rut: <%= @alumno.rut %>
         </div>
         <div class="field">
-            <%= @alumno.user.email %>
+            Correo: <%= @alumno.user.email %>
         </div>
 <%end%>

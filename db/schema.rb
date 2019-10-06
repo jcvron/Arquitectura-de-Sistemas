@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_10_06_164603) do
-=======
-ActiveRecord::Schema.define(version: 2019_10_06_155257) do
->>>>>>> 705d32ad57005bd59c8b6ff380c749cab465ab62
+ActiveRecord::Schema.define(version: 2019_10_06_205751) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +52,7 @@ ActiveRecord::Schema.define(version: 2019_10_06_155257) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.integer "calificacion"
     t.index ["user_id"], name: "index_profesors_on_user_id"
   end
 
@@ -79,11 +76,8 @@ ActiveRecord::Schema.define(version: 2019_10_06_155257) do
   end
 
   add_foreign_key "alumnos", "users"
-<<<<<<< HEAD
   add_foreign_key "cursos", "alumnos"
   add_foreign_key "cursos", "profesors"
-=======
->>>>>>> 705d32ad57005bd59c8b6ff380c749cab465ab62
   add_foreign_key "posts", "users"
   add_foreign_key "profesors", "users"
 end

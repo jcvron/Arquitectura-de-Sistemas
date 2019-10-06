@@ -3,9 +3,18 @@
 <% if user_signed_in? %>
     <h1><%= @profe.nombre %></h1>
         <div class="field">
-            <%= @profe.rut %>
+            Rut: <%= @profe.rut %>
         </div>
         <div class="field">
-            <%= @profe.user.email %>
+           Correo: <%= @profe.user.email %>
         </div>
+        <div class="field">
+            Calificación Estudiantes(1-10): <%= @profe.calificacion %>
+        </div>
+        <%if current_user.teacher %>
+        <%else%>
+        <li class="btn be-red white field">
+          <%= link_to ' Editar',  controller: "profesors", action: "edit", id: @profe%>
+        </li>
+        <%end%>
 <%end%>

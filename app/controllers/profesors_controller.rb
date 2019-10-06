@@ -23,6 +23,6 @@ end
 
 private
 def persona_params
-    params.require(:profesor).permit(:nombre,:rut)
+    params.require(:profesor).permit(:nombre,:rut,:calificacion)
 end
 end
