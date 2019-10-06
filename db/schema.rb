@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_06_145044) do
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2019_10_06_164603) do
+=======
+ActiveRecord::Schema.define(version: 2019_10_06_155257) do
+>>>>>>> 705d32ad57005bd59c8b6ff380c749cab465ab62
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +25,8 @@ ActiveRecord::Schema.define(version: 2019_10_06_145044) do
     t.string "pais"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_alumnos_on_user_id"
   end
 
   create_table "cursos", force: :cascade do |t|
@@ -29,6 +35,10 @@ ActiveRecord::Schema.define(version: 2019_10_06_145044) do
     t.integer "Creditos"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "alumno_id"
+    t.bigint "profesor_id"
+    t.index ["alumno_id"], name: "index_cursos_on_alumno_id"
+    t.index ["profesor_id"], name: "index_cursos_on_profesor_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -45,6 +55,8 @@ ActiveRecord::Schema.define(version: 2019_10_06_145044) do
     t.string "rut"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_profesors_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -66,5 +78,12 @@ ActiveRecord::Schema.define(version: 2019_10_06_145044) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "alumnos", "users"
+<<<<<<< HEAD
+  add_foreign_key "cursos", "alumnos"
+  add_foreign_key "cursos", "profesors"
+=======
+>>>>>>> 705d32ad57005bd59c8b6ff380c749cab465ab62
   add_foreign_key "posts", "users"
+  add_foreign_key "profesors", "users"
 end
