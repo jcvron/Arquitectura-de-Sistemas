@@ -1,3 +1,5 @@
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-6">
 <div style="width:80%;margin:0 auto;">
     <h1>Editar Datos</h1>
     <%= form_for(@profe) do |f| %>
@@ -8,6 +10,9 @@
         <%end%>
         <div class="field">
             <%= f.text_field :nombre, placeholder: "Nombres", class:"form-control"%>
+        </div>
+        <div class="field">
+            <%= f.number_field :calificacion, min: 1, max: 7, placeholder: "Ingrese Calificación a Profesor", class:"form-control"%>
         </div>
         <div class="field">
             <%= f.submit "Guardar", class:"btn be-red white " %>
