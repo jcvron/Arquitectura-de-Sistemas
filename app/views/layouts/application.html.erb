@@ -19,15 +19,11 @@
             <h1 class="no-margin"id=logo><%= link_to "Unab",root_path%></h1>
           </li>
           <% if user_signed_in? %>
-          <% if current_user.teacher %>
+          
           <li class="col-md">
-            <%= link_to "Perfil", profesors_path %>
+            <%= link_to "Perfil", '/home/perfil' %>
           </li>
-          <%else%>
-          <li class="col-md">
-            <%= link_to "Perfil", alumnos_path %>
-          </li>
-          <%end%>          
+              
           <%end%>
           <li class="col-md">
             <%= link_to "Profesores", profesors_path %>

@@ -1,3 +1,5 @@
+<div class="row center-xs">
+  <div class="col-xs-8 col-md-6">
 <h1>Index Home</h1>
 <h2>Bienvenido Conchatumare<h2>
 <h3>El Concho la chupa completa</h3>
@@ -12,19 +14,20 @@
         <h4>wena profe ♡</h4>
         <% else %>
         <h4>wena compare ♡</h4>
+
         <% end %>
         
-        <li class="nav-item">
+        <li class="btn red field nav-item">
           <%= link_to 'Salir', destroy_user_session_path, method: :delete %>
         </li>
         <li class="nav-item">
             <%= link_to 'Posts', posts_path %>
         </li>
       <% else %>
-        <li class="nav-item">
+        <li class="btn be-red white field nav-item">
           <%= link_to ' Iniciar', new_user_session_path %>
         </li>
-        <li class="nav-item">
+        <li class="btn be-red white field nav-item">
           <%= link_to ' Registrarme', new_user_registration_path %>
         </li>
       <% end %>

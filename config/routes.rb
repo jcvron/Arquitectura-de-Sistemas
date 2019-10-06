@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get 'home/index'
   root to: "home#index"
   get 'alumnos/index'
+  get 'home/perfil'
 
 end

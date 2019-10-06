@@ -1,0 +1,30 @@
+<ul class="nav justify-content-end">
+    
+      <%- if user_signed_in?%>
+
+        <% if current_user.teacher %>
+        <h4>wena profe 111♡</h4>
+        <% @homes.each do |persona| %>
+            <h1><%=  persona.nombre %></h1>
+            <div>
+                <%= persona.rut %> - <%= link_to "Ver Perfil",persona , class:"red" %>
+            </div>
+        <%end%>
+        <% else %>
+        <h4>wena compare 1111111♡</h4>
+        <% @casita.each do |persona| %>
+            <h1><%=  persona.nombre %></h1>
+            <div>
+                <%= persona.rut %> - <%= link_to "Ver Perfil",persona , class:"red" %>
+            </div>
+        <%end%>
+        <% end %>
+        <li class="btn red field nav-item">
+            <%= link_to 'Posts', posts_path %>
+        </li>
+      <% end %>
+</ul>
+
+
+<h5>Real hasta la muerte, oite bb ♡</h4>
+
