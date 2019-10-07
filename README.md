@@ -1,24 +1,14 @@
 # README
+Se requiere tener instalado Docker y Docker-compose.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Instrucciones mediante consola:
 
-Things you may want to cover:
+*docker-compose run web rake db:drop #En caso de que haya una db ya creada*
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+docker-compose run web rake db:migrate
+docker-compose run web rake db:create
+docker-compose up #Para correr de manera local, en "localhost:3000"
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
