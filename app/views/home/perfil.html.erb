@@ -17,7 +17,7 @@
         <% @casita.each do |persona| %>
             <h1><%=  persona.nombre %></h1>
             <div>
-                <%= persona.rut %> - <%= link_to "Ver Perfil",persona , class:"red" %>
+                <%= persona.rut %>
             </div>
             <h2>Cursos</h2>
             <% @cursitos.each do |clase| %>
