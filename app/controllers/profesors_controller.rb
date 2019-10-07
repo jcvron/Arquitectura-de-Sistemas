@@ -20,6 +20,7 @@ class ProfesorsController < ApplicationController
 end
 def edit
     @profe = Profesor.find(params[:id])
+    
 end
 
 
