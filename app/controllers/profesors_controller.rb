@@ -4,6 +4,8 @@ class ProfesorsController < ApplicationController
   end
   def show
     @profe = Profesor.find(params[:id])
+    @profe1 = Profesor.where user_id: current_user.id
+    @comment = Comment.new
   end
   #PUT /personas/:id
   def update

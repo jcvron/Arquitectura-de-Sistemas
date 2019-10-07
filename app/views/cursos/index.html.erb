@@ -4,7 +4,10 @@
         <% @cursos.each do |curso| %>
             <h1><%=  curso.Nombre %></h1>
             <div>
-                <%= curso.NRC %>
+               NRC: <%= curso.NRC %>
+            </div>
+            <div>
+               Creditos: <%= curso.Creditos %>
             </div>
         <%end%>
     <%else%>

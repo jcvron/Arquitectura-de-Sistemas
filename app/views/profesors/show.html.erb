@@ -11,8 +11,20 @@
         <div class="field">
             Calificación Estudiantes(1-10): <%= @profe.calificacion %>
         </div>
+        
         <%if current_user.teacher %>
+        <ul>
+            <h2>Comentarios:</h2>
+            <% @profe.comments.each do |comment| %>
+            <li>
+              <%= comment.body %>
+            </li>
+            <%end%>
+          </ul>
         <%else%>
+        <div class="field">
+            <h3>Comentarios</h3>
+            <%= render "comments/form" %>
         <li class="btn be-red white field">
           <%= link_to ' Editar',  controller: "profesors", action: "edit", id: @profe%>
         </li>
