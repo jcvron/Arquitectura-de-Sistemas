@@ -8,7 +8,9 @@ Instrucciones mediante consola:
 
 
 docker-compose run web rake db:migrate
+
 docker-compose run web rake db:create
+
 docker-compose up #Para correr de manera local, en "localhost:3000"
 
 
