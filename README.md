@@ -15,3 +15,16 @@ docker-compose up #Para correr de manera local, en "localhost:3000"
 Link a Heroku:
 
 https://arqsist.herokuapp.com/
+
+
+Cuentas permitidas de la app:
+-----Alumno-----
+Cuenta: juan@gmail.com
+
+Password: 123456
+
+----Profesor-----
+
+Cuenta:pogaf@gmail.com
+
+Password: 123456
